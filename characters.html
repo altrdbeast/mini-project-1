@@ -28,13 +28,24 @@
       href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <nav class="navbar bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="/docs/logo.png" alt="Rick and Morty" height="90" />
+          <img src="/docs/logo.png" alt="Rick and Morty" height="50" />
         </a>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Characters</a></li>
+            <li><a class="dropdown-item" href="#">Episodes</a></li>
+            <li><a class="dropdown-item" href="#">Locations</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div
@@ -49,7 +60,7 @@
     ></script>
   </body>
   <script>
-    fetch("https://rickandmortyapi.com/api/character")
+    fetch("https://rickandmortyapi.com/api/character?page=1")
       .then((response) => response.json())
       .then((data) => {
         data.results.forEach((post) => {
