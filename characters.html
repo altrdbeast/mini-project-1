@@ -1,10 +1,12 @@
-<template id="json-data">
+<template id="rm-data">
   <div class="col">
-    <div class="card">
+    <div class="card bg-light">
+      <img class="img container-fluid" src="" />
       <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
-        <img class="img" src="" />
+        
+        <h3 class="name"></h3>
+        <p class="status"></p>
+        <p class="species"></p>
       </div>
     </div>
   </div>
@@ -28,30 +30,49 @@
       href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navbar bg-light">
+    <!-- Top Nav Bar -->
+    <nav class="navbar fixed-top bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="/docs/logo.png" alt="Rick and Morty" height="50" />
-        </a>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Characters</a>
+        <div class="btn-group">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
             Menu
           </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Characters</a></li>
-            <li><a class="dropdown-item" href="#">Episodes</a></li>
-            <li><a class="dropdown-item" href="#">Locations</a></li>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="characters.html">Characters</a></li>
+            <li><a class="dropdown-item" href="episodes.html">Episodes</a></li>
+            <li><a class="dropdown-item" href="locations.html">Locations</a></li>
           </ul>
         </div>
       </div>
     </nav>
+    <!-- Main content  -->
     <div
-      id="data-cards"
-      class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4"
+      id="rmdata"
+      class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4 bg-light"
     ></div>
+    <!-- Bottom Navbar -->
+    <nav class="navbar fixed-bottom bg-light">
+      <div class="container-fluid justify-content-center gap-2">
+        <button type="button" onclick="changePage(false)" class="btn btn-secondary">
+          Previous
+        </button>
+        <button type="button" onclick="changePage(true)" class="btn btn-secondary">
+          Next
+        </button>
+        <div id = "page-counter">Page 1 of 42</div>
+      </div>
+    </nav>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -60,18 +81,48 @@
     ></script>
   </body>
   <script>
-    fetch("https://rickandmortyapi.com/api/character?page=1")
-      .then((response) => response.json())
-      .then((data) => {
-        data.results.forEach((post) => {
-          const template = document
-            .getElementById("json-data")
-            .content.cloneNode(true);
-          template.querySelector(".card-title").innerText = post.name;
-          template.querySelector(".card-text").innerText = post.status;
-          template.querySelector(".img").src = post.image;
-          document.querySelector("#data-cards").appendChild(template);
+    
+
+
+    //fetch and display data in template
+    function fetchData() {
+      document.querySelector("#rmdata").innerHTML="";
+      fetch("https://rickandmortyapi.com/api/character?page=" + currentPage)
+        .then((response) => response.json())
+        .then((data) => {
+          data.results.forEach((post) => {
+            const template = document
+              .getElementById("rm-data")
+              .content.cloneNode(true);
+            template.querySelector(".name").innerText = post.name;
+            template.querySelector(".status").innerText = (`Status: ${post.status}`);
+            template.querySelector(".species").innerText = (`Species: ${post.species}`);
+            template.querySelector(".img").src = post.image;
+            document.querySelector("#rmdata").appendChild(template);
+          });
         });
-      });
+    }    
+    
+    
+    //edit fetch source to different page number
+    let currentPage = 1;
+
+    function changePage(isNext) {
+      if (isNext) {
+        currentPage = (currentPage <42) ? currentPage + 1 : 42
+      }
+      else {
+        currentPage = (currentPage > 1) ? currentPage - 1 : 1
+      }
+
+      // console.log(currentPage);
+      // console.log("test");
+      fetchData();
+      document.getElementById("page-counter").innerHTML= (`Page ${currentPage} of 42`)
+    }
+    fetchData();
+
+
+
   </script>
 </html>
