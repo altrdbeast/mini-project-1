@@ -3,14 +3,14 @@
         <div class="accordion">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button bg-dark text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button bg-success text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body bg-success">
-                    <p class="name"></p>
-                    <p class = "airdate"></p>
-                    <p class = "episode"></p>
+                <div class="accordion-body bg-dark">
+                    <p class="name text-light"></p>
+                    <p class ="airdate text-light"></p>
+                    <p class ="episode text-light"></p>
                 </div>
               </div>
             </div>
@@ -37,32 +37,32 @@
       />
       <link rel="stylesheet" href="styles.css" />
     </head>
-    <body class = "bg-secondary">
+    <body>
       <!-- Top Nav Bar -->
       <nav class="navbar fixed-top bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand text-success" href="index.html">
-            <img src="/docs/logo.png" alt="Rick and Morty" height="50" />
-          </a>
+            <img src="/docs/logo2.png" alt="Rick and Morty" height="50" />
+          Rick and Morty</a>
           <div class = "justify-content-center gap-2">
-            <button type="button" onclick="changePage(false)" class="btn btn-light text-success">
+            <button type="button" onclick="changePage(false)" class="btn btn-success">
               Previous
             </button>
-            <button type="button" onclick="changePage(true)" class="btn btn-light text-success">
+            <button type="button" onclick="changePage(true)" class="btn btn-success">
               Next
             </button>
-            <div class = "text-center text-success" id = "page-counter">Page 1 of 3</div>
+            <div class = "text-center text-light" id = "page-counter">Page 1 of 3</div>
           </div>
           <div class="btn-group">
             <button
-              class="btn btn-light btn-lg text-success dropdown-toggle"
+              class="btn btn-success btn-lg dropdown-toggle"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               Menu
             </button>
-            <ul class="dropdown-menu dropdown-menu-end bg-success">
+            <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="characters.html">Characters</a></li>
               <li><a class="dropdown-item" href="episodes.html">Episodes</a></li>
               <li><a class="dropdown-item" href="locations.html">Locations</a></li>
@@ -72,7 +72,7 @@
       </nav>
       <!-- Main content  -->
       <div
-        id="rmdata" class="container-fluid w-50 mx-auto row g-4 bg-secondary">
+        id="rmdata" class="container-fluid w-50 mx-auto row g-4">
         
         </div>
     </body>
