@@ -1,5 +1,5 @@
 <template id="rm-data">
-  <tr>
+  <tr class = "text-light">
     <td id="name"></td>
     <td id="type"></td>
     <td id="dimension"></td>
@@ -52,7 +52,7 @@
             Page 1 of 7
           </div>
         </div>
-        <div class="btn-group">
+        <div class="btn-group" id = "menu">
           <button
             class="btn btn-success btn-lg dropdown-toggle"
             type="button"
@@ -61,7 +61,7 @@
           >
             Menu
           </button>
-          <ul class="dropdown-menu dropdown-menu-end">
+          <ul class="dropdown-menu dropdown-menu-end text-center w-100">
             <li>
               <a class="dropdown-item" href="characters.html">Characters</a>
             </li>
@@ -74,8 +74,9 @@
       </div>
     </nav>
     <!-- Main content  -->
+    <h1 class = "header container-fluid w-75">Locations</h1>
     <table
-      class="table text-center table-striped mx-auto"
+      class="table text-center mx-auto w-75"
       id="table-contents"
     >
       <thead>

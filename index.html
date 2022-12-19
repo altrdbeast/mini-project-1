@@ -1,42 +1,45 @@
 <template id="rm-characters">
-    <div>
-      <div class="card bg-dark">
-        <img class="img container-fluid p-2" src="" />
-        <div class="card-body">
-          
-          <h5 class="name text-success"></h5>
-          <p class="status text-light"></p>
-          <p class="species text-light"></p>
-        </div>
+  <div>
+    <div class="card bg-dark">
+      <img class="img rounded-4 container-fluid p-2" src="" />
+      <div class="card-body">
+        <h5
+          class="name text-light bg-success p-1 border border-light rounded text-center"
+        ></h5>
+        <p class="status text-light"></p>
+        <p class="species text-light"></p>
       </div>
     </div>
-  </template>
+  </div>
+</template>
 
-  <template id="rm-episodes">
-    <div>
-      <div class="card bg-dark">
-        <div class="card-body">
-          
-          <h5 class="episode text-success"></h5>
-          <p class="episode-name text-light"></p>
-          <p class="airdate text-light"></p>
-        </div>
+<template id="rm-episodes">
+  <div>
+    <div class="card bg-dark">
+      <div class="card-body">
+        <h5
+          class="episode text-light bg-success p-1 border border-light rounded text-center"
+        ></h5>
+        <p class="episode-name text-light"></p>
+        <p class="airdate text-light"></p>
       </div>
     </div>
-  </template>
+  </div>
+</template>
 
-  <template id="rm-locations">
-    <div>
-      <div class="card bg-dark">
-        <div class="card-body">
-          
-          <h5 class="location-name text-success"></h5>
-          <p class="type text-light"></p>
-          <p class="dimension text-light"></p>
-        </div>
+<template id="rm-locations">
+  <div>
+    <div class="card bg-dark">
+      <div class="card-body">
+        <h5
+          class="location-name text-light bg-success p-1 border border-light rounded text-center"
+        ></h5>
+        <p class="type text-light"></p>
+        <p class="dimension text-light"></p>
       </div>
     </div>
-  </template>
+  </div>
+</template>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,61 +64,75 @@
   <body>
     <!-- Top Nav Bar -->
     <nav class="navbar fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand text-success text-lg" href="index.html">
-            <img src="/docs/logo2.png" alt="Rick and Morty" height="50" />
-          Rick and Morty</a>
-          
-          <div class="btn-group">
-            <button
-              class="btn btn-success btn-lg dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Menu
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end bg-light">
-              <li><a class="dropdown-item text-success" href="characters.html">Characters</a></li>
-              <li><a class="dropdown-item text-success" href="episodes.html">Episodes</a></li>
-              <li><a class="dropdown-item text-success" href="locations.html">Locations</a></li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand text-success text-lg" href="index.html">
+          <img src="/docs/logo2.png" alt="Rick and Morty" height="50" />
+          Rick and Morty</a
+        >
+
+        <div class="btn-group" id="menu">
+          <button
+            class="btn btn-success btn-lg dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end bg-light text-center w-100"
+          >
+            <li>
+              <a class="dropdown-item" href="characters.html">Characters</a>
+            </li>
+            <li><a class="dropdown-item" href="episodes.html">Episodes</a></li>
+            <li>
+              <a class="dropdown-item" href="locations.html">Locations</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
     <!-- Main content  -->
     <!-- Characters -->
-    <h1 class = "header container-fluid w-75">Characters</h1>
+    <h1 class="header container-fluid w-75">
+      <a class="link" href="characters.html">Characters</a>
+    </h1>
     <div
       id="rmcharacters"
       class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4"
-    >
-    
-</div>
-<div class = "container-fluid w-75 p-4 d-md-flex justify-content-md-end">
-    <a class="btn btn-success btn-lg" href="characters.html" role="button">View all Characters...</a>
-</div>
-<!-- Episodes -->
-<h1 class = "header container-fluid w-75">Episodes</h1>
-<div
-id="rmepisodes"
-class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4"
->
-</div>
-<div class = "container-fluid w-75 p-4 d-md-flex justify-content-md-end">
-<a class="btn btn-success btn-lg" href="episodes.html" role="button">View all Episodes...</a>
-</div>
-<!-- Locations -->
-<h1 class = "header container-fluid w-75">Locations</h1>
-<div
-id="rmlocations"
-class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4"
->
-</div>
-<div class = "container-fluid w-75 p-4 d-md-flex justify-content-md-end">
-<a class="btn btn-success btn-lg" href="locations.html" role="button">View all Locations...</a>
-</div>
-
+    ></div>
+    <div class="container-fluid w-75 p-4 d-md-flex justify-content-md-end">
+      <a class="btn btn-success btn-lg" href="characters.html" role="button"
+        >View all Characters...</a
+      >
+    </div>
+    <!-- Episodes -->
+    <h1 class="header container-fluid w-75">
+      <a class="link" href="episodes.html">Episodes</a>
+    </h1>
+    <div
+      id="rmepisodes"
+      class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4"
+    ></div>
+    <div class="container-fluid w-75 p-4 d-md-flex justify-content-md-end">
+      <a class="btn btn-success btn-lg" href="episodes.html" role="button"
+        >View all Episodes...</a
+      >
+    </div>
+    <!-- Locations -->
+    <h1 class="header container-fluid w-75">
+      <a class="link" href="locations.html">Locations</a>
+    </h1>
+    <div
+      id="rmlocations"
+      class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4"
+    ></div>
+    <div class="container-fluid w-75 p-4 d-md-flex justify-content-md-end">
+      <a class="btn btn-success btn-lg" href="locations.html" role="button"
+        >View all Locations...</a
+      >
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -124,12 +141,9 @@ class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-
     ></script>
   </body>
   <script>
-    
-
-
     //get rm characters
     function fetchCharacters() {
-      document.querySelector("#rmcharacters").innerHTML="";
+      document.querySelector("#rmcharacters").innerHTML = "";
       fetch("https://rickandmortyapi.com/api/character/1,2,3,4,5")
         .then((response) => response.json())
         .then((data) => {
@@ -138,17 +152,21 @@ class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-
               .getElementById("rm-characters")
               .content.cloneNode(true);
             template.querySelector(".name").innerText = post.name;
-            template.querySelector(".status").innerText = (`Status: ${post.status}`);
-            template.querySelector(".species").innerText = (`Species: ${post.species}`);
+            template.querySelector(
+              ".status"
+            ).innerText = `Status: ${post.status}`;
+            template.querySelector(
+              ".species"
+            ).innerText = `Species: ${post.species}`;
             template.querySelector(".img").src = post.image;
             document.querySelector("#rmcharacters").appendChild(template);
           });
         });
-    }    
-    
+    }
+
     //get rm episodes
     function fetchEpisodes() {
-      document.querySelector("#rmepisodes").innerHTML="";
+      document.querySelector("#rmepisodes").innerHTML = "";
       fetch("https://rickandmortyapi.com/api/episode/1,2,3,4,5")
         .then((response) => response.json())
         .then((data) => {
@@ -156,17 +174,23 @@ class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-
             const template = document
               .getElementById("rm-episodes")
               .content.cloneNode(true);
-            template.querySelector(".episode").innerText = (`Episode: ${post.episode}`);
-            template.querySelector(".episode-name").innerText = (`Name: ${post.name}`);
-            template.querySelector(".airdate").innerText = (`Air date: ${post.air_date}`);
+            template.querySelector(
+              ".episode"
+            ).innerText = `Episode: ${post.episode}`;
+            template.querySelector(
+              ".episode-name"
+            ).innerText = `Name: ${post.name}`;
+            template.querySelector(
+              ".airdate"
+            ).innerText = `Air date: ${post.air_date}`;
             document.querySelector("#rmepisodes").appendChild(template);
           });
         });
-    }    
+    }
 
     //get rm locations
     function fetchLocations() {
-      document.querySelector("#rmlocations").innerHTML="";
+      document.querySelector("#rmlocations").innerHTML = "";
       fetch("https://rickandmortyapi.com/api/location/1,2,3,4,5")
         .then((response) => response.json())
         .then((data) => {
@@ -174,13 +198,17 @@ class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-
             const template = document
               .getElementById("rm-locations")
               .content.cloneNode(true);
-            template.querySelector(".location-name").innerText = (`Name: ${post.name}`);
-            template.querySelector(".type").innerText = (`Type: ${post.type}`);
-            template.querySelector(".dimension").innerText = (`Dimension: ${post.dimension}`);
+            template.querySelector(
+              ".location-name"
+            ).innerText = `Name: ${post.name}`;
+            template.querySelector(".type").innerText = `Type: ${post.type}`;
+            template.querySelector(
+              ".dimension"
+            ).innerText = `Dimension: ${post.dimension}`;
             document.querySelector("#rmlocations").appendChild(template);
           });
         });
-    }  
+    }
 
     fetchCharacters();
     fetchEpisodes();

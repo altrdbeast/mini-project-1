@@ -1,9 +1,11 @@
 <template id="rm-data">
   <div>
     <div class="card bg-dark">
-      <img class="img container-fluid p-2" src="" />
+      <img class="img rounded-4 scontainer-fluid p-2" src="" />
       <div class="card-body">
-        <h5 class="name text-success"></h5>
+        <h5
+          class="name text-light bg-success p-1 border border-light rounded text-center"
+        ></h5>
         <p class="status text-light"></p>
         <p class="species text-light"></p>
       </div>
@@ -34,11 +36,13 @@
   <body>
     <!-- Top Nav Bar -->
     <nav class="navbar fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand text-success" href="index.html">
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand text-success" href="index.html" id="logo">
           <img src="/docs/logo2.png" alt="Rick and Morty" height="50" />
-        Rick and Morty</a>
-        <div class="justify-content-center gap-2">
+          Rick and Morty</a
+        >
+
+        <div class="gap-2" id="navbuttons">
           <button
             type="button"
             onclick="changePage(false)"
@@ -57,7 +61,8 @@
             Page 1 of 42
           </div>
         </div>
-        <div class="btn-group">
+
+        <div class="btn-group" id="menu">
           <button
             class="btn btn-success btn-lg dropdown-toggle"
             type="button"
@@ -66,8 +71,8 @@
           >
             Menu
           </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
+          <ul class="dropdown-menu dropdown-menu-end text-center w-100">
+            <li class="text-white">
               <a class="dropdown-item" href="characters.html">Characters</a>
             </li>
             <li><a class="dropdown-item" href="episodes.html">Episodes</a></li>
@@ -79,6 +84,7 @@
       </div>
     </nav>
     <!-- Main content  -->
+    <h1 class="header container-fluid w-75">Characters</h1>
     <div
       id="rmdata"
       class="container-fluid w-75 mx-auto row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4"
