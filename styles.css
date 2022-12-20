@@ -11,11 +11,6 @@ body {
   height: 100%;
 }
 
-.header {
-  font-size: 6rem;
-  color: white;
-}
-
 #menu {
   width: 221.43px;
 }
@@ -28,7 +23,7 @@ body {
 a.link:hover {
   animation-name: link-animation;
   animation-iteration-count: infinite;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 @keyframes link-animation {
@@ -41,4 +36,32 @@ a.link:hover {
   100% {
     color: white;
   }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .link {font-size: 15vw;};
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .link {font-size: 15vw};
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .link {font-size: 6rem};
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main {width: 75%; margin: auto;};
+  .link {font-size: 6rem};
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main {width: 75%; margin: auto};
+  .link {font-size: 6rem};
 }
