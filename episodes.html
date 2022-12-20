@@ -97,7 +97,7 @@
               const template = document
                 .getElementById("rm-data")
                 .content.cloneNode(true);
-              template.querySelector(".accordion-button").innerText = (`Episode ${post.id}`);
+              template.querySelector(".accordion-button").innerText = (`Episode ${post.id}: ${post.name}`);
               template.querySelector(".accordion-button").setAttribute("data-bs-target", "#collapse" + post.id);
               template.querySelector(".accordion-collapse").id = "collapse" + post.id
               template.querySelector(".name").innerText = (`Name: ${post.name}`);
