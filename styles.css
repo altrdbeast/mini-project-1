@@ -3,7 +3,7 @@
 }
 
 body {
-  margin-top: 85px;
+  /* margin-top: 85px; */
   background-color: black;
 }
 
@@ -72,27 +72,27 @@ a.link:hover {
 
 
 @media only screen and (max-width: 385px) {
-  body {margin-top: 200px;}
+  /* body {margin-top: 200px;} */
   .link {font-size: 15vw;};
 }
 
 @media only screen and (min-width: 385px) {
-  body {margin-top: 150px;}
+  /* body {margin-top: 150px;} */
   .link {font-size: 15vw;};
 }
 
 @media only screen and (min-width: 605px) {
-  body {margin-top: 85px;}
+  /* body {margin-top: 85px;} */
   .link {font-size: 15vw};
 }
 
 @media only screen and (min-width: 768px) {
-  body {margin-top: 85px;}
+  /* body {margin-top: 85px;} */
   .link {font-size: 6rem}; 
 } 
 
 @media only screen and (min-width: 992px) {
-  body {margin-top: 85px;}
+  /* body {margin-top: 85px;} */
   .main {width: 75%; margin: auto;};
   .link {font-size: 6rem};
 } 
