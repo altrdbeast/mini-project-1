@@ -1,0 +1,125 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Rick and Morty",
+    "description": "Rick and Morty API",
+    "license": {
+      "name": "The Rick and Morty API",
+      "url": "https://rickandmortyapi.com/"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Rick and Morty API",
+      "description": "API for listing Rick and Morty Characters, Episodes and Locations"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/rickmorty/characters": 
+    {
+      "get": {
+        "tags": ["List all Rick and Morty characters"],
+        "summary": "List all Rick and Morty characters",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number to display"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to list all Rick and Morty characters with 20 results per page"
+          }
+        }
+      }
+    },
+    "/rickmorty/episodes": 
+    {
+      "get": {
+        "tags": ["List all Rick and Morty episodes"],
+        "summary": "List all Rick and Morty episodes",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number to display"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to list all Rick and Morty episodes with 20 results per page"
+          }
+        }
+      }
+    },
+    "/rickmorty/locations": 
+    {
+      "get": {
+        "tags": ["List all Rick and Morty locations"],
+        "summary": "List Rick and Morty locations",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number to display"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to list all Rick and Morty locations with 20 results per page"
+          }
+        }
+      }
+    },
+    "/rickmorty/firstfivecharacters": 
+    {
+      "get": {
+        "tags": ["List first five Rick and Morty characters"],
+        "summary": "List first five Rick and Morty characters",
+        "parameters": [
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to list the first five Rick and Morty characters"
+          }
+        }
+      }
+    },
+    "/rickmorty/firstfiveepisodes": 
+    {
+      "get": {
+        "tags": ["List first five Rick and Morty episodes"],
+        "summary": "List first five Rick and morty episodes",
+        "parameters": [
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to list the first five Rick and Morty episodes"
+          }
+        }
+      }
+    },
+    "/rickmorty/firstfivelocations": 
+    {
+      "get": {
+        "tags": ["List first five Rick and Morty locations"],
+        "summary": "List first five Rick and Morty locations",
+        "parameters": [
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to list the first five Rick and Morty locations"
+          }
+        }
+      }
+    }   
+  }
+  
+}
